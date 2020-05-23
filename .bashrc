@@ -124,4 +124,4 @@ alias evrc='vim ~/.vimrc'
 alias ebrc='vim ~/.bashrc'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-alias config ='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
+alias config='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
