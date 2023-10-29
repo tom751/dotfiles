@@ -11,6 +11,7 @@ set noswapfile
 set incsearch
 set hlsearch
 set clipboard=unnamedplus
+set scrolloff=999
 
 call plug#begin('~/.vim/plugged')
 

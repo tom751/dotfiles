@@ -4,11 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/tom/.oh-my-zsh"
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,12 +103,36 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias air='~/.air'
-alias evrc='vim ~/.vimrc'
+alias evrc='vim ~/.config/nvim/init.vim'
 alias ebrc='vim ~/.bashrc'
 alias ezrc='vim ~/.zshrc'
+alias rzrc='source ~/.zshrc'
+alias ei3='vim ~/.config/i3/config'
+alias etmux='vim ~/.tmux.conf'
 alias nc='nordvpn c'
 alias nd='nordvpn d'
+alias nr='sudo service nordvpnd restart'
+alias rl='xrandr --output DP-0 --rotate left'
+alias rr='xrandr --output DP-0 --rotate right'
+alias rn='xrandr --output DP-0 --rotate normal'
+alias gs='git status'
+alias gl='git log'
+alias gcan='git commit --amend --no-edit'
+alias nvim='~/./nvim.appimage'
+alias vim='nvim'
+alias config='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
+alias fixsound='go run ~/code/go/fixsound/main.go'
+alias kbus='setxkbmap us'
+alias kbuk='setxkbmap gb'
+alias ca="pactl list sinks short | awk '{print \$2}' | fzf | xargs pactl set-default-sink"
+alias mc='protonvpn-cli c --sc'
+alias md='protonvpn-cli d'
+alias ms='protonvpn-cli status'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
-alias config='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+
+path+=/home/tom/go/bin
+
