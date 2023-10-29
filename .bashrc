@@ -119,12 +119,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias air='~/.air'
-alias evrc='vim ~/.vimrc'
-alias ebrc='vim ~/.bashrc'
-alias rl='xrandr --output DVI-D-1 --rotate left'
-alias rr='xrandr --output DVI-D-1 --rotate right'
-alias rn='xrandr --output DVI-D-1 --rotate normal'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias config='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
