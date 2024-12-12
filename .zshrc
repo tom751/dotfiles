@@ -119,9 +119,6 @@ alias vim='nvim'
 alias config='/usr/bin/git --git-dir=/home/tom/dotfiles --work-tree=/home/tom'
 alias kbus='setxkbmap us'
 alias kbuk='setxkbmap gb'
-alias mc='protonvpn-cli c --sc'
-alias md='protonvpn-cli d'
-alias ms='protonvpn-cli status'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
@@ -130,3 +127,5 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
 path+=/home/tom/go/bin
 
+export DENO_INSTALL="/home/tom/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
