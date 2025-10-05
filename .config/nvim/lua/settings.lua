@@ -2,8 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 
-vim.cmd.colorscheme('slate')
-
 local opt = vim.opt
 
 -- Show line numbers
